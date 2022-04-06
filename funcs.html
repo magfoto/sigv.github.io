@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+© 2022 Marcus A. Gordon. All rights reserved.
+
+--------------------------------------
+______________________________________
+===.===    ===    ====    ====  =   =
+==.=.==   = . =   =  ===  ==     =.=
+=.   .=  =     =  =====   ====  =   =
+--------------------------------------
+______________________________________
+
+MAGEX ART ID
+
+-->
+
+<head>
+
+  <title>sigv.js: Functions</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <meta name="keywords" content="" />
+  <meta name="description" content="sigv, a mini-language for live code and electronics" />
+
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"></link>
+  <link rel="stylesheet" href="global.css"></link>
+
+</head>
+<body class="avenir">
+  <section class="pa3 pa4-m pa5-l">
+    <a href="index.html" class="f5 link dim br2 ph3 pv2 mb2 dib white bg-near-black dib grow">
+      - sigv
+    </a>
+    <a href="init.html" class="f5 link dim br2 ph3 pv2 mb2 dib white bg-near-black dib grow">
+      Init
+    </a>
+    <a href="ele.html" class="f5 link dim br2 ph3 pv2 mb2 dib white bg-near-black dib grow">
+      Elements
+    </a>
+    <a href="funcs.html" class="f5 link dim br2 ph3 pv2 mb2 dib white bg-gray dib grow">
+      Functions
+    </a>
+  <h2>sigv: Functions</h2>
+  <pre><code class="code-highlighted code-js"><span class="syntax-all syntax-comment">// sigv composition modes
+  </span><span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">auto</span>() {
+    <span class="syntax-all syntax-variable">wrld</span>(<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">gridObject</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">demo</span>() {
+    <span class="syntax-all syntax-variable">wrld</span>(<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">gridObject</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;light&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs1&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;opencylinder&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs2&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;sphere&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">.7</span>,<span class="syntax-all syntax-constant">10000</span>);
+    <span class="syntax-all syntax-variable">bfgObject</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;diffuse_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;normals_texture&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;heightmap_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.45</span>);
+    <span class="syntax-all syntax-comment">// specs();
+  </span>  <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;peak&#39;</span>,<span class="syntax-all syntax-constant">0.32</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;peak&#39;</span>,<span class="syntax-all syntax-string">&#39;line&#39;</span>,<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;fpic&#39;</span>,<span class="syntax-all syntax-string">&#39;bang&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">9</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">-.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;rotatexyz&#39;</span>,<span class="syntax-all syntax-constant">90</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">ritt</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;light&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;proc&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;proc&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;proc&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;proc&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">20</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;proc&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">osm</span>() {
+    <span class="syntax-all syntax-variable">gridObject</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;light&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs1&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;opencylinder&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs2&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;sphere&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">.7</span>,<span class="syntax-all syntax-constant">10000</span>);
+    <span class="syntax-all syntax-variable">bfgObject</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;poly_mode&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;diffuse_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;normals_texture&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;heightmap_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.45</span>);
+    <span class="syntax-all syntax-comment">// specs();
+  </span>  <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;peak&#39;</span>,<span class="syntax-all syntax-constant">0.32</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;peak&#39;</span>,<span class="syntax-all syntax-string">&#39;line&#39;</span>,<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;fpic&#39;</span>,<span class="syntax-all syntax-string">&#39;read&#39;</span>,<span class="syntax-all syntax-string">&#39;/Users/magfoto/Desktop/[ M ] Studio/material/osmosis material/IMG_4892.JPG&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;fpic&#39;</span>,<span class="syntax-all syntax-string">&#39;bang&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">9</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">-.025</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;rotatexyz&#39;</span>,<span class="syntax-all syntax-constant">90</span>,<span class="syntax-all syntax-constant">144.46</span>,<span class="syntax-all syntax-constant">0</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">third</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;mtex&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;read&#39;</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">tvstart</span>() {
+    <span class="syntax-all syntax-variable">wrld</span>(<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">bgObject</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;fpic&#39;</span>,<span class="syntax-all syntax-string">&#39;read&#39;</span>,<span class="syntax-all syntax-string">&#39;colorbars.png&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;fpic&#39;</span>,<span class="syntax-all syntax-string">&#39;bang&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;diffuse_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">spinny</span>() {
+    <span class="syntax-all syntax-variable">wrld</span>(<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs2&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;sphere&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">10000</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;js&#39;</span>,<span class="syntax-all syntax-string">&#39;light&#39;</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">krypton</span>() {
+    <span class="syntax-all syntax-comment">// wrld(2);
+  </span>  <span class="syntax-all syntax-variable">gridObject</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;draw_mode&#39;</span>,<span class="syntax-all syntax-string">&#39;polygon&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs2&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;opencylinder&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs1&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;opencube&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">3000</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;gs1&#39;</span>,<span class="syntax-all syntax-string">&#39;shape&#39;</span>,<span class="syntax-all syntax-string">&#39;cone&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;diffuse_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;basis&#39;</span>,<span class="syntax-all syntax-string">&#39;noise.simplex&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;origin&#39;</span>,<span class="syntax-all syntax-constant">4.</span>,<span class="syntax-all syntax-constant">2.</span>,<span class="syntax-all syntax-constant">0.</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;offset&#39;</span>,<span class="syntax-all syntax-constant">0.1</span>,<span class="syntax-all syntax-constant">0.1</span>,<span class="syntax-all syntax-constant">0.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">100.</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;weight&#39;</span>,<span class="syntax-all syntax-constant">0.12</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">10000</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">tub1</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;mtex&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;read&#39;</span>,<span class="syntax-all syntax-string">&#39;Bathtub.dae&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">.075</span>,<span class="syntax-all syntax-constant">0</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">tub2</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;scaleto&#39;</span>,<span class="syntax-all syntax-constant">0.25</span>,<span class="syntax-all syntax-constant">0.25</span>,<span class="syntax-all syntax-constant">0.25</span>,<span class="syntax-all syntax-constant">10</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;model&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;springto&#39;</span>,<span class="syntax-all syntax-constant">2.25</span>,<span class="syntax-all syntax-constant">-1.15</span>,<span class="syntax-all syntax-constant">0</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">lorenz1</span>() {
+    <span class="syntax-all syntax-keyword">var</span> <span class="syntax-all syntax-parameter">lorenz</span> <span class="syntax-all syntax-keyword">=</span> <span class="syntax-all syntax-constant">this</span><span class="syntax-all syntax-keyword">.</span><span class="syntax-all syntax-parameter">patcher</span><span class="syntax-all syntax-keyword">.</span><span class="syntax-all syntax-variable">newdefault</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz-system&#39;</span>);
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;light&#39;</span>,<span class="syntax-all syntax-string">&#39;activate&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">lorenzObject</span>();
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">lorenz2</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;scaleto&#39;</span>,<span class="syntax-all syntax-constant">1.2</span>,<span class="syntax-all syntax-constant">1.2</span>,<span class="syntax-all syntax-constant">1.2</span>,<span class="syntax-all syntax-constant">10</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;point_size&#39;</span>,<span class="syntax-all syntax-constant">1.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;diffuse_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;normals_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;heightmap_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;specular_model&#39;</span>,<span class="syntax-all syntax-string">&#39;toon&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;shininess&#39;</span>,<span class="syntax-all syntax-constant">20</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_specular&#39;</span>,<span class="syntax-all syntax-constant">0.2</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0.3</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">lorenz3</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;activate&#39;</span>,<span class="syntax-all syntax-constant">2</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">burke1</span>() {
+    <span class="syntax-all syntax-keyword">var</span> <span class="syntax-all syntax-parameter">burkeshaw</span> <span class="syntax-all syntax-keyword">=</span> <span class="syntax-all syntax-constant">this</span><span class="syntax-all syntax-keyword">.</span><span class="syntax-all syntax-parameter">patcher</span><span class="syntax-all syntax-keyword">.</span><span class="syntax-all syntax-variable">newdefault</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;burke-shaw-system&#39;</span>);
+    <span class="syntax-all syntax-variable">wrld</span>(<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">burkeObject</span>();
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">osci</span>() {
+    <span class="syntax-all syntax-variable">wrld</span>(<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">light</span>();
+    <span class="syntax-all syntax-variable">quadrant2</span>();
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">quadrant</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_emission&#39;</span>,<span class="syntax-all syntax-constant">.1</span>,<span class="syntax-all syntax-constant">.1</span>,<span class="syntax-all syntax-constant">.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_diffuse&#39;</span>,<span class="syntax-all syntax-constant">.2</span>,<span class="syntax-all syntax-constant">.2</span>,<span class="syntax-all syntax-constant">.2</span>, <span class="syntax-all syntax-constant">.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;draw_mode&#39;</span>,<span class="syntax-all syntax-string">&#39;quad_grid&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;poly_mode&#39;</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;activate&#39;</span>,<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;sig&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;sigx&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;sigy&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;para&#39;</span>,<span class="syntax-all syntax-string">&#39;sphere&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;para&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">.4</span>,<span class="syntax-all syntax-constant">2000</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_emission&#39;</span>,<span class="syntax-all syntax-constant">.35</span>,<span class="syntax-all syntax-constant">.35</span>,<span class="syntax-all syntax-constant">.35</span>);
+
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">quadrant2</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;fpic&#39;</span>,<span class="syntax-all syntax-string">&#39;bang&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;diffuse_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;emission_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;normals_texture&#39;</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;light&#39;</span>,<span class="syntax-all syntax-string">&#39;activate&#39;</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_emission&#39;</span>,<span class="syntax-all syntax-constant">.1</span>,<span class="syntax-all syntax-constant">.1</span>,<span class="syntax-all syntax-constant">.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_diffuse&#39;</span>,<span class="syntax-all syntax-constant">.2</span>,<span class="syntax-all syntax-constant">.2</span>,<span class="syntax-all syntax-constant">.2</span>, <span class="syntax-all syntax-constant">.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;draw_mode&#39;</span>,<span class="syntax-all syntax-string">&#39;quad_grid&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;poly_mode&#39;</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;aio&#39;</span>,<span class="syntax-all syntax-string">&#39;activate&#39;</span>,<span class="syntax-all syntax-constant">2</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;para&#39;</span>,<span class="syntax-all syntax-string">&#39;sphere&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;para&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">.4</span>,<span class="syntax-all syntax-constant">2000</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;wave&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_emission&#39;</span>,<span class="syntax-all syntax-constant">.35</span>,<span class="syntax-all syntax-constant">.35</span>,<span class="syntax-all syntax-constant">.35</span>);
+
+  }
+
+  <span class="syntax-all syntax-comment">// sigv objects
+  </span>
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">gridObject</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;anim&#39;</span>,<span class="syntax-all syntax-string">&#39;turn&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">-1</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;grid&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_emission&#39;</span>,<span class="syntax-all syntax-constant">.2</span>,<span class="syntax-all syntax-constant">.2</span>,<span class="syntax-all syntax-constant">.2</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">bfgObject</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;basis&#39;</span>,<span class="syntax-all syntax-string">&#39;noise.simplex&#39;</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;origin&#39;</span>,<span class="syntax-all syntax-constant">0.</span>,<span class="syntax-all syntax-constant">0.</span>,<span class="syntax-all syntax-constant">0.</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;offset&#39;</span>,<span class="syntax-all syntax-constant">0.1</span>,<span class="syntax-all syntax-constant">0.1</span>,<span class="syntax-all syntax-constant">0.1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.75</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bfg&#39;</span>,<span class="syntax-all syntax-string">&#39;weight&#39;</span>,<span class="syntax-all syntax-constant">0.32</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">bgObject</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;enable&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">3.25</span>,<span class="syntax-all syntax-constant">2.25</span>,<span class="syntax-all syntax-constant">1</span>,<span class="syntax-all syntax-string">&#39;position&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_diffuse&#39;</span>,<span class="syntax-all syntax-constant">.5</span>,<span class="syntax-all syntax-constant">.5</span>,<span class="syntax-all syntax-constant">.5</span>,<span class="syntax-all syntax-constant">1.</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;bg&#39;</span>,<span class="syntax-all syntax-string">&#39;material&#39;</span>,<span class="syntax-all syntax-string">&#39;mat_emission&#39;</span>,<span class="syntax-all syntax-constant">.1</span>,<span class="syntax-all syntax-constant">.1</span>,<span class="syntax-all syntax-constant">.1</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">lorenzObject</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;sample&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;rotatexyz&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">-57</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;lorenz&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">10.</span>,<span class="syntax-all syntax-constant">28.</span>,<span class="syntax-all syntax-constant">2.667</span>,<span class="syntax-all syntax-constant">0.007</span>);
+  }
+
+  <span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">burkeObject</span>() {
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;burkeshaw&#39;</span>,<span class="syntax-all syntax-string">&#39;sample&#39;</span>,<span class="syntax-all syntax-constant">1</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;burkeshaw&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;scale&#39;</span>,<span class="syntax-all syntax-constant">0.5</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;burkeshaw&#39;</span>,<span class="syntax-all syntax-string">&#39;mesh&#39;</span>,<span class="syntax-all syntax-string">&#39;rotatexyz&#39;</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-constant">-57</span>);
+    <span class="syntax-all syntax-variable">outlet</span>(<span class="syntax-all syntax-constant">0</span>,<span class="syntax-all syntax-string">&#39;burkeshaw&#39;</span>,<span class="syntax-all syntax-string">&#39;^&#39;</span>,<span class="syntax-all syntax-constant">10.</span>,<span class="syntax-all syntax-constant">4.272</span>,<span class="syntax-all syntax-constant">0.01</span>);
+  }
+
+  <span class="syntax-all syntax-comment">// sigv utils
+  </span><span class="syntax-all syntax-keyword">function</span> <span class="syntax-all syntax-entity">del</span>(<span class="syntax-all syntax-parameter">o</span>) {
+    <span class="syntax-all syntax-constant">this</span><span class="syntax-all syntax-keyword">.</span><span class="syntax-all syntax-parameter">patcher</span><span class="syntax-all syntax-keyword">.</span><span class="syntax-all syntax-variable">remove</span>(<span class="syntax-all syntax-parameter">o</span>);
+  }</code></pre>
+
+    </section>
+</body>
+</html>
