@@ -4,27 +4,17 @@
 
 © 2022 Marcus A. Gordon. All rights reserved.
 
---------------------------------------
-______________________________________
-===.===    ===    ====    ====  =   =
-==.=.==   = . =   =  ===  ==     =.=
-=.   .=  =     =  =====   ====  =   =
---------------------------------------
-______________________________________
-
-MAGEX ART ID
-
 -->
 
 <head>
 
-  <title>sigv.js</title>
+  <title>sigv: Elements</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
   <meta name="keywords" content="" />
-  <meta name="description" content="sigv.js, a Max/Javascript based mini-language for live coding" />
+  <meta name="description" content="sigv, a mini-language for live coding and electroacoustics" />
 
-  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"></link>
+  <link rel="stylesheet" href="global.css"></link>
 
 </head>
 <body class="avenir">
@@ -41,173 +31,214 @@ MAGEX ART ID
     <a href="funcs.html" class="f5 link dim br2 ph3 pv2 mb2 dib white bg-near-black dib grow">
       Functions
     </a>
+    <a href="info.html" class="f5 link dim br2 ph3 pv2 mb2 dib white bg-near-black dib grow">
+      ( i )
+    </a>
     <br / />
-    <hr />
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">aio</a>
+    <br />
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">~</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sigx</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sigy</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">div</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">phase</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">peak</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">amp</a><<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">line</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">set</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">link</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">src</a>
 
-    <a class="f3 link hover-black b no-underline red dib ph2 pv1" href="">&gt; pwr</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; sigx</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; sigy</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; phase</a>
+    <br / /><br / />
 
-    <a class="f3 link hover-black b no-underline green dib ph2 pv1" href="">&gt;~ audio</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">aio</a>
 
-    <a class="f3 link hover-black b no-underline dark-blue dib ph2 pv1" href="">&gt;- xsignal</a><a class="f3 link hover-black b no-underline dark-blue dib ph2 pv1" href="">&gt;- ysignal</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sigx</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sigy</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">div</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">phase</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">peak</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">amp</a><<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">line</a>
 
-    <a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; peaksig</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; peaklogic</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; peak</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; pkmp</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; pkline</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; peakamps</a>
+    <a class="f5 link hover-white no-underline red dib ph2 pv1" href="">&gt; pwr</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; sigx</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; sigy</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; phase</a>
 
-    <br/><br/>
+    <a class="f5 link hover-white no-underline green dib ph2 pv1" href="">&gt;~ audio</a>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">bfg</a>
+    <a class="f5 link hover-white no-underline dark-blue dib ph2 pv1" href="">&gt;- xsignal</a><a class="f5 link hover-white no-underline dark-blue dib ph2 pv1" href="">&gt;- ysignal</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">scale</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">weight</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">basis</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">origin</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">offset</a>
-
-    <a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; basis</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; origin</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; offset</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; scale</a><a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; weight</a>
+    <a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; peaksig</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; peaklogic</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; peak</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; pkmp</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; pkline</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; peakamps</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">bg</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">asl</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">triple</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">iso</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs1</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs2</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">^</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">fpic</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a>
-
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">burkeshaw</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sample</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">^</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">c</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">v</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">dt</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">val</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">data</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">handle</a>
-
-    <a class="f3 link hover-black b no-underline gray dib ph2 pv1" href="">&gt; strange</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">open</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">count</a>
+    <a class="f5 link hover-white no-underline gold i dib ph2 pv1" href="">celikovsky</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">metro</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a>
-
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">cv</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">tap</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">bpm</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">rate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">pitch</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">osci</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">zero</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">pwr</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">|~ dac 3 4</a>
+    <a class="f5 link hover-white no-underline gray i dib ph2 pv1" href="">TBA</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">grain</a>
+    <a class="f5 link hover-white no-underline gold i dib ph2 pv1" href="">clifford</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">density</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">channels</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">size</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">pitch</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">target</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sample</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">position</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">window</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">spray</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">spread</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">psp</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">preset</a>
-
-    <a class="f3 link hover-black b no-underline dark-pink dib ph2 pv1" href="">&gt; gsig</a>
+    <a class="f5 link hover-white no-underline gray i dib ph2 pv1" href="">TBA</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">graph</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">bfg</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">val</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">scale</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">weight</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">basis</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">origin</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">offset</a>
 
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">grid</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">triple</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">iso</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs1</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs2</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">^</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">fpic</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">op</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">export</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a>
+    <a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; basis</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; origin</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; offset</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; scale</a><a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; weight</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">light</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">bg</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">bfg</a>
-
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">lorenz</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sample</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">^</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">a</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">b</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">c</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">dt</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">val</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">data</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">iso</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">handle</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">lpro</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">clocker</a>-<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">div</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">scale</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">period</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">time</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">bfg</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">slide</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">&gt; strange</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">triple</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">iso</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs1</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs2</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">^</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">fpic</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">lttp</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">burkeshaw</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sub</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">vol</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sample</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">^</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">c</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">v</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">dt</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">val</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">data</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">handle</a>
 
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">markov</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">build</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">dump</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">order</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">target</a>-<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">scale</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">weight</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sigx</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">sigy</a>|
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">&gt; dump</a>
+    <a class="f5 link hover-white no-underline gray dib ph2 pv1" href="">&gt; strange</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">midi</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">count</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">cc</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">prog</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">ch</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">seq</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">loop</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">flush</a>
-
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">model</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">triple</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">iso</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">^</a>-<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">triple</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">triple</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">iso</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">handle</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">fpic</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">metro</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">nurbs</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">cv</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">triple</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">iso</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">handle</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">surf</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">tap</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">bpm</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">rate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">pitch</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">osci</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">zero</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">pwr</a>
 
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">orca</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">start</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">write</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">select</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">auto</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">inter</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">live</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">64</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">info</a>-<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">open</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">close</a>|
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">|~ dac 3 4</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">osc</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">grain</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">shiftr</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">density</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">channels</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">size</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">pitch</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">target</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sample</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">position</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">window</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">spray</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">spread</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">psp</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">preset</a>
 
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">proc</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gs</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">clocker</a>-<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">div</a>|<a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">scale</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">period</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">time</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">bfg</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">slide</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a>
+    <a class="f5 link hover-white no-underline dark-pink dib ph2 pv1" href="">&gt; gsig</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">sketch</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">graph</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">val</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">som</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">grid</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">q</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">gen</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">texture</a>
-
-    <br/><br/>
-
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">shell</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">triple</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">iso</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs1</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs2</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">^</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">fpic</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">op</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">export</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">terra</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">light</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">reset</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">coord</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">op</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">activate</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">qt</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">~</a>
-
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">set</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">link</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">src</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">bfg</a>
 
     <br/><br/>
 
-    <a class="f3 link hover-black b no-underline yellow dib ph2 pv1" href="">wave</a>
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">lorenz</a>
 
-    <a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">material</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">anim</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">para</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">fpic</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">mesh</a><a class="f3 link hover-black b no-underline blue dib ph2 pv1" href="">aio</a>
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sample</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">^</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">a</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">b</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">c</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">dt</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">val</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">data</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">iso</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">handle</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">lpro</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">clocker</a>-<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">div</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">scale</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">period</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">time</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">bfg</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">slide</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">&gt; strange</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">lttp</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sub</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">vol</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">markov</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">build</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">dump</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">order</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">target</a>-<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">scale</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">weight</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sigx</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">sigy</a>|
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">&gt; dump</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">midi</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">cc</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">prog</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">ch</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">seq</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">loop</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">flush</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">model</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">triple</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">iso</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">^</a>-<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">triple</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">triple</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">iso</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">handle</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">fpic</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline gold i dib ph2 pv1" href="">multiple</a>
+
+    <a class="f5 link hover-white no-underline gray i dib ph2 pv1" href="">TBA</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">nurbs</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">triple</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">iso</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">handle</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">surf</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">orca</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">start</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">write</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">select</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">auto</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">inter</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">live</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">64</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">info</a>-<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">open</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">close</a>|
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">osc</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">shiftr</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">proc</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gs</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">clocker</a>-<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">div</a>|<a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">scale</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">period</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">time</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">bfg</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">slide</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline gold i dib ph2 pv1" href="">rossler</a>
+
+    <a class="f5 link hover-white no-underline gray i dib ph2 pv1" href="">TBA</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">sketch</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">som</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">q</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">gen</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">texture</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">shell</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline light-yellow dib ph2 pv1" href="">specs</a>
+
+    <a class="f5 link hover-white no-underline gray i dib ph2 pv1" href="">Rebuilding...</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">terra</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">reset</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">coord</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">op</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">activate</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">qt</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a>
+
+    <br/><br/>
+
+    <a class="f5 link hover-white no-underline yellow dib ph2 pv1" href="">wave</a>
+
+    <a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">material</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">anim</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">para</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">fpic</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">mesh</a><a class="f5 link hover-white no-underline blue dib ph2 pv1" href="">aio</a>
 
 
     </section>
