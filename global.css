@@ -67,7 +67,7 @@ code {
   content: '* A TOTAL OF ' counter(eles) ' ELEMENTS.';
 }
 
-code.yellow {
+code.yellow, code.gold {
   counter-increment: eles;
 }
 
