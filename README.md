@@ -1,5 +1,3 @@
-# MAGEX ART ID
 
 
-
-© 2019 Marcus A. Gordon. http://magex.githbub.io
+© 2019-2022 Marcus A. Gordon.

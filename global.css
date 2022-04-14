@@ -12,7 +12,7 @@
 
 body {
 	/* font-size:   13pt; */
-  counter-reset: codes mods streams sidenotes;
+  counter-reset: eles mods streams sidenotes;
   color: var(--font-color);
   background-color: var(--bg-color);
 	font-family: "Avenir Next", "Avenir", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -64,11 +64,11 @@ code {
 .routes::after {
 	color: var(--code-txt);
   padding-top: 25px;
-  content: '* A TOTAL OF ' counter(codes) ' CODES.';
+  content: '* A TOTAL OF ' counter(eles) ' ELEMENTS.';
 }
 
-.routes > div code {
-  counter-increment: codes;
+code.yellow {
+  counter-increment: eles;
 }
 
 pre {
@@ -76,7 +76,7 @@ pre {
 	text-align:    left;
 	line-height:   1.2em;
 	overflow-x:    scroll;
-	background:    #282c34;
+	background:    #161616;  /* #282c34; */
 	padding:       20pt;
 	margin:        20pt 0;
 	border-radius: 3pt;
@@ -190,34 +190,39 @@ a:focus, a:hover {
   color: rgba(30, 144, 255, 0.8);
 }
 
-div .red {
+.red {
   background-color: hsla(0,100%,60%,0.25);
   color: hsla(25,100%,60%,0.75);
 }
 
-div .green {
+.green {
   background-color: hsla(160,100%,80%,0.25);
   color: hsla(100,100%,40%,0.75);
 }
 
-div .blue {
+.blue {
   background-color: hsla(215,100%,80%,0.25);
   color: hsla(190,100%,40%,0.75);
 }
 
-div .magenta {
+.magenta {
   background-color: hsla(331,100%,60%,0.25);
   color: hsla(325,100%,70%,0.75);
 }
 
-div .cyan {
+.cyan {
   background-color: hsla(191,100%,60%,0.25);
   color: hsla(192,100%,60%,0.75);
 }
 
-div .yellow {
+.yellow {
   background-color: hsla(40,90%,75%,0.75);
   color: hsla(192,0%,0%,0.75);
+}
+
+.bluegel {
+	background-color: rgba(30,144,255,0.8);
+	color: #000;
 }
 
 mark {
